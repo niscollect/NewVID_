@@ -2,11 +2,9 @@ import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 import { application } from "express";
 
-console.log("BB");
 
 const mongoDB_Uri="mongodb+srv://collectnis:240311035766@learningstage1.rjgxf.mongodb.net";
 
-console.log("CC");
 
 const connectDB = async () => {
    try {
@@ -22,11 +20,7 @@ const connectDB = async () => {
    }
 }
 
-console.log("TT");
-
 connectDB();
-
-console.log("SS");
 
 export default connectDB;
 
