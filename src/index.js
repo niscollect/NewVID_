@@ -1,9 +1,9 @@
 // require('dotenv').config({path:'./env'})
 
-import dotenv from "dotenv";
-dotenv.config({
-    path:'./env'
-});
+// import dotenv from "dotenv";
+// dotenv.config({
+//     path:'./env'
+// });
 
 const PORT = 3000; //Typically we should take it from the environment variables
 
@@ -36,7 +36,7 @@ import connectDB from "./db/index.js";
 import { app } from "./app.js";
 
 // connectDB();
-// connectDB which we are calling, is asynchronous, tehrefoe it will return a promise, so
+// connectDB which we are calling, is asynchronous, therefoe it will return a promise, so
 connectDB()
 .then(() => {
     app.on("error", (error) => {

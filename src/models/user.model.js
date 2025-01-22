@@ -58,7 +58,7 @@ const userSchema = new mongoose.Schema({
 //Password Encryption
 userSchema.pre("save", async function(next){
     if(!this.isModified("password")) { return next()}
-    this.password = bcrypt.hash(this.password, 10);
+    this.password = await bcrypt.hash(this.password, 10);  //"await" beacuse it takes time doing such things
     next();
 })  // basically we the password to be hashed only when it is modified, otherwise if we don't control it using the if statement, the password will be hashed everytime the user changes and saves anything, and the password would then change all the time
 
